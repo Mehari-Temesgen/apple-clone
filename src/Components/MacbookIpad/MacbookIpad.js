@@ -1,5 +1,6 @@
 import React from "react";
 import newIpad from "../../images/icons/new-ipad-logo.png";
+import newIcon from "../../images/icons/10002 (1).png";
 import LearnMoreBuy from "../LearnMoreBuy/LearnMoreBuy";
 const MacbookIpad = () => {
   return (
@@ -8,10 +9,14 @@ const MacbookIpad = () => {
         <div className="row gx-md-3">
           <div className="col-12 col-md-6 mb-2 mb-md-0">
             <div className="left-col-mackbook text-center mackbook-pro-col pt-4">
-              <div className="model">16-inch model</div>
-              <div className="product-title-small">MacBook Pro</div>
+              {/* <div className="model">16-inch model</div> */}
+              <div className="product-title-small">
+                <img src={newIcon} />
+              </div>
               <div className="description-wraper">
-                The best for the brightest.
+                <p className="new-text">
+                  Get $180-$620 in credit when you trade in iphon11 or higher
+                </p>
               </div>
               <LearnMoreBuy />
             </div>

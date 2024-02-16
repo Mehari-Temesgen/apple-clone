@@ -111,11 +111,15 @@ body {
 }
 /*=========== macbook and ipad section styling ===========*/
 .left-col-mackbook {
-  background-image: url("../images/home/macbook-pro.jpg");
+  background-image: url("../images/home/100001.jpg");
   background-position: bottom;
   background-size: initial;
   background-repeat: no-repeat;
   height: 580px;
+}
+.new-text {
+  padding: 0px 120px;
+  text-align: center;
 }
 .mackbook-pro-col {
   background-color: #fafafa;
