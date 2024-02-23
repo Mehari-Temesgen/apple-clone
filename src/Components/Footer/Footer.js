@@ -3,9 +3,9 @@ import flag from "../../images/icons/16.png";
 import FotterProps from "./FooterProps";
 import $ from "jquery";
 function Footer() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [footerOpen, setMenuOpen] = useState(false);
   const handleMenuClick = () => {
-    setMenuOpen(!menuOpen);
+    setMenuOpen(!footerOpen);
   };
   useEffect(() => {
     return () => {
@@ -28,7 +28,7 @@ function Footer() {
         $(this).toggleClass("expanded");
       });
     };
-  }, [menuOpen]);
+  }, [footerOpen]);
   return (
     <div>
       <footer className="apple-footer pb-3">
