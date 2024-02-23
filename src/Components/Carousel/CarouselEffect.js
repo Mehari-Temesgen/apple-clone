@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { img } from "./img/data";
+import "./Carousel.css";
 const CarouselEffect = () => {
   return (
     <div>
@@ -17,10 +18,10 @@ const CarouselEffect = () => {
       >
         {img?.map((imageLink) => {
           return (
-            <>
-              <img src={imageLink} />
-              {/* <p>{text1}</p> */}
-            </>
+            <div className="my-caousel">
+              <img src={imageLink.imgs} />
+              <p>{imageLink.img_text}</p>
+            </div>
           );
         })}
       </Carousel>

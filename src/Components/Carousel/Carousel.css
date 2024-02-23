@@ -1,0 +1,14 @@
+.my-caousel {
+  position: relative;
+}
+.my-caousel p {
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+  background-color: gray;
+  opacity: 0.6;
+  font-size: 0.99rem;
+  color: white;
+  font-family: sans-serif;
+  padding: 10px 4px;
+}

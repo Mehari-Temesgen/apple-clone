@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import logo from "../../images/icons/logo-sm.png";
 import search from "../../images/icons/search-icon-sm.png";
 import cart from "../../images/icons/cart-sm.png";
