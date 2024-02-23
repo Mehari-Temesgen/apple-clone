@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../images/icons/logo-sm.png";
 import search from "../../images/icons/search-icon-sm.png";
 import cart from "../../images/icons/cart-sm.png";
@@ -6,14 +6,18 @@ import HeaderLink from "./HeaderLink";
 import { Link } from "react-router-dom";
 import $ from "jquery";
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
+  };
   useEffect(() => {
     return () => {
-      $(".navbar-toggler-icon").on("click", ToggleDown);
-      function ToggleDown() {
-        $("#navmenu").slideToggle();
-      }
+      // $(".navbar-toggler-icon").on("click", ToggleDown);
+      // const ToggleDown = () => {
+      $("#navmenu").slideToggle();
+      // };
     };
-  }, []);
+  }, [menuOpen]);
   return (
     <div>
       <nav
@@ -30,7 +34,12 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span
+              className="navbar-toggler-icon"
+              onClick={() => {
+                handleMenuClick();
+              }}
+            ></span>
           </button>
           <Link className="navbar-brand mx-auto" to="/">
             <img src={logo} alt="" />
