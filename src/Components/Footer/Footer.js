@@ -1,8 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import flag from "../../images/icons/16.png";
 import FotterProps from "./FooterProps";
 import $ from "jquery";
 function Footer() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenuClick = () => {
+    setMenuOpen(!menuOpen);
+  };
   useEffect(() => {
     return () => {
       if ($(window).width() <= 768) {
@@ -24,7 +28,7 @@ function Footer() {
         $(this).toggleClass("expanded");
       });
     };
-  }, []);
+  }, [menuOpen]);
   return (
     <div>
       <footer className="apple-footer pb-3">
@@ -57,7 +61,13 @@ function Footer() {
           </div>
           <div className="footer-link-item row pt-2">
             <div className="col-sm-12 col-md">
-              <h3>shop and Learn</h3>
+              <h3
+                onClick={() => {
+                  handleMenuClick();
+                }}
+              >
+                shop and Learn
+              </h3>
               <ul className="list_item">
                 <FotterProps FootLink="#" FootName="mac" />
                 <FotterProps FootLink="#" FootName="iPad" />
